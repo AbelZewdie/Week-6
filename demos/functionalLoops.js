@@ -79,7 +79,18 @@ menu = {
 // Object.keys(menu).forEach( m => menu[m].forEach(i=> console.log(m+":\t", i.name, i.price)));
 
 
-displayItem = i => console.log(i.name, i.price)
-displaySection = m => { console.log(m + ":\t"); menu[m].forEach(displayItem)};
-Object.keys(menu).forEach(displaySection);
+// displayItem = i => console.log(i.name, i.price)
+// displaySection = m => { console.log(m + ":\t"); menu[m].forEach(displayItem)};
+// Object.keys(menu).forEach(displaySection);
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// ["apples", "banana", "cherry"].forEach(console.log)
+
+
+["apples", "banana", "cherry"].forEach((fruit, index, list) => console.log(index, fruit, list.length));
+
+
 

@@ -1,0 +1,34 @@
+<body>
+<div id="menuTarget">?</div>  
+</body>
+<script>
+
+menu = {
+  breakfast : [
+    {name: "pancakes", price:3.99},
+    {name: "ham", price: 4.99},
+  ],
+  lunch : [
+    {name: "sandwich", price:6.99},
+    {name: "soup", price: 2.99},
+  ],
+}
+//forEach visits each element once executing some code
+//.map() creates an array from an array
+//.joint("") //glues an array back into a string
+option = name => `<option>${name},</option>`;
+select = list => `<select>${list.map(option).join("")}</select>`;
+html = select(Object.keys(menu))
+console.log(html);
+menuTarget.innerHTML = html
+
+  //1. Select
+  //2. Options for menu cats
+  //3. on select cat
+  //4. show items for just the selected cat
+  //5. on select item
+  //6. show details for the selected item.
+displayItem = i => console.log(i.name, i.price)
+displaySection = m => { console.log(m + ":\t"); menu[m].forEach(displayItem)};
+Object.keys(menu).forEach(displaySection);
+</script>
